@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Environment
+.env
+
+# Node
+node_modules/
+
+# Angular
+dist/
+
+# Uploads
+uploads/
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI Tooling
+frontend/.claude/
+frontend/.windsurf/
