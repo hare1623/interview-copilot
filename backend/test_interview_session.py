@@ -7,4 +7,4 @@ questions = service.build_interview_set(skills=["Angular"])
 
 for question in questions:
 
-    print(f"{question.difficulty.upper()} " f"- {question.question}")
+    print(f"{question['metadata']['difficulty'].upper()} " f"- {question['question']}")

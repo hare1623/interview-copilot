@@ -44,11 +44,10 @@ class InterviewSessionService:
 
             interview_questions.append(
                 {
-                    "id": question.id,
-                    "skill": question.skill,
-                    "difficulty": (question.difficulty),
-                    "question": (question.question),
-                    "tags": question.tags,
+                    "question_id": question.get("question_id"),
+                    "skill": (question["metadata"]["skill"]),
+                    "difficulty": (question["metadata"]["difficulty"]),
+                    "question": (question["question"]),
                 }
             )
 

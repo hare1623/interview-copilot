@@ -11,7 +11,12 @@ class OllamaService:
 
         response = requests.post(
             OLLAMA_URL,
-            json={"model": model or OLLAMA_MODEL, "prompt": prompt, "stream": False},
+            json={
+                "model": model or OLLAMA_MODEL,
+                "prompt": prompt,
+                "stream": False,
+                "options": {"temperature": 0.2, "num_predict": 200},
+            },
         )
 
         data = response.json()
