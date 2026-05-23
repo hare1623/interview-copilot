@@ -11,25 +11,12 @@ class CandidateProfileService:
         db = SessionLocal()
 
         candidate = CandidateProfile(
-
             name=profile_data.get("name"),
-
             role=profile_data.get("role"),
-
-            experience_years=str(
-                profile_data.get("experience_years")
-            ),
-
-            skills=json.dumps(
-                profile_data.get("skills", [])
-            ),
-
-            domains=json.dumps(
-                profile_data.get("domains", [])
-            ),
-
-            summary=profile_data.get("summary")
-
+            experience_years=str(profile_data.get("experience_years")),
+            skills=json.dumps(profile_data.get("skills", [])),
+            domains=json.dumps(profile_data.get("domains", [])),
+            summary=profile_data.get("summary"),
         )
 
         db.add(candidate)

@@ -1,0 +1,13 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+class Settings:
+    DATABASE_URL = os.getenv("DATABASE_URL")
+    OLLAMA_URL = os.getenv("OLLAMA_URL")
+    OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
+
+
+settings = Settings()
